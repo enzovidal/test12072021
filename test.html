@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#footer">bajar</a>
+    <h1>Hola</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+    <p id="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident neque corporis, laudantium dolores vitae similique ex est, vero velit quisquam eos sunt eligendi quae. Dignissimos explicabo iste ex magnam sed!</p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("a").click(function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var gato = this.hash;
+                    
+                    $('html, body').animate({
+                    scrollTop: $(gato).offset().top
+                    }, 800, function(){
+                        window.location.hash = gato;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
